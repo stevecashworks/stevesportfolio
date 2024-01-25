@@ -1,0 +1,29 @@
+.aboutText, .aboutIntro, .aboutBtn, .aboutHead {
+    transform: translateY(100px);
+}
+
+.aboutBtn,
+.aboutIntro,
+.aboutText, 
+.aboutHead {
+    transition: all 0.8s linear;
+}
+
+.aboutHead {
+    transition-delay: 0.2s;
+}
+
+.aboutIntro {
+    transition-delay: 0.4s;
+}
+
+.aboutText {
+    transition-delay: 0.6s;
+}
+
+.aboutContent.visible > .aboutHead,
+.aboutContent.visible > .aboutBtn,
+.aboutContent.visible > .aboutIntro,
+.aboutContent.visible > .aboutText {
+    transform: translateY(0);
+}

@@ -1,0 +1,12 @@
+.ach1{
+    transition: all 0.5s linear;
+    transform:translateX(-130px);
+}
+.ach2{
+    transform:translateX(130px);
+    transition: all 0.5s linear;
+    
+}
+.ach.visible > div{
+transform:translateX(0)
+}

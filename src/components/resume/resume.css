@@ -1,0 +1,13 @@
+.resumeGroup:hover>.resumeDate{
+    color:var(--primary);
+}
+.resumeGroup:hover>.dot{
+    background-color: var(--primary);
+}
+.resumeGroup{
+    transition:all 1s linear;
+    transform:translateX(200px)
+}
+.resumeGroup.visible{
+    transform: translateX(0);
+}

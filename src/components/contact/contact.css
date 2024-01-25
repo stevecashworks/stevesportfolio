@@ -1,0 +1,9 @@
+.formCon > div{
+    transition:all 0.8s linear;
+    transform:translateY(150px);
+    
+}
+.formCon > .visible{
+    background:transparent;
+    transform:translateY(0px);
+}
