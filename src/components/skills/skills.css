@@ -1,0 +1,22 @@
+.moveRight{
+    transform:translateX(500px);
+}
+.moveLeft{
+    transform:translateX(-500px);
+
+}
+.moveUp{
+    transform:translateY(-260px);
+
+}
+.moveDown{
+    transform:translateY(260px);
+
+}
+.moveDown,.moveLeft,.moveRight,.moveUp{
+    transition:all 1.8s linear;
+}
+.visible{
+    transform: translateX(0);
+    transform: translateY(0);
+}

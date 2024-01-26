@@ -37,6 +37,7 @@ function App() {
       <Resume/>
       <Services/>
       <Skills/>
+    
       <Contact/>
       </Content>
 

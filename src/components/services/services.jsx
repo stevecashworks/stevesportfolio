@@ -47,7 +47,7 @@ const serviceList = [
 ];
 const Services=()=>{
 return(
-    <Container>
+    <Container id="services">
         <SectionBtn Icon={GrServices} text="Services"/>
         <ServiceHeader>My <Colored>Services</Colored> </ServiceHeader>
         <ServicesCon>

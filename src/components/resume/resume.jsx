@@ -72,7 +72,7 @@ const Resume= ()=>{
         }
     })
     return (
-      <Container>
+      <Container id="resume">
         <SectionBtn Icon={BsBriefcase} text={"Resume"} />
         <ResumeHeader>
           Education & <Colored>Experience</Colored>

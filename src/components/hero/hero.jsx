@@ -222,7 +222,7 @@ const Hero = () => {
 
   const text = "Stevecashworks";
   return (
-    <Container>
+    <Container id="home">
       <Background src={back} autoPlay loop muted>
       </Background>
         <Blur/>

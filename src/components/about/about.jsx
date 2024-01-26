@@ -47,7 +47,7 @@ const About = () =>{
     
   })
     return (
-      <Container style={{  height:"600px" }}>
+      <Container style={{  height:"600px" }} id="about">
         {/* <Background src={backvid} autoPlay loop muted></Background> */}
         <Content className="aboutContent" style={{ paddingTop: "30px", boxSizing: "border-box",marginTop:"60px" }}>
           <SectionBtn className="aboutBtn"

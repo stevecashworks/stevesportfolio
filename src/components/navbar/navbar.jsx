@@ -8,7 +8,7 @@ import { PiVinylRecordBold } from "react-icons/pi";
 import { SlSpeech } from "react-icons/sl";
 // import { Nav,Anc } from "../hero/hero";
 const Iconslist = [
-  { Icon: CgHome, path: "#hero" },
+  { Icon: CgHome, path: "#home" },
   { Icon: RxAvatar, path: "#about" },
   { Icon: BsBriefcase, path: "#resume" },
   { Icon: GrServices, path: "#services" },

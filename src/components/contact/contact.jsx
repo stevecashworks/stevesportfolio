@@ -4,6 +4,7 @@ import {CgHello} from "react-icons/cg"
 import {MdOutlineCloudUpload} from "react-icons/md"
 import { useEffect } from "react"
 import "./contact.css"
+import getContactDetails from "./getContactDetails"
 import handleIntersection from "../../functions/handleIntersection"
 const Container=styled.div`
     height:700px;
@@ -83,6 +84,10 @@ const SendBtn=styled.button`
     margin-top:40px;
 `
 const Contact=()=>{
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    getContactDetails(e.target)
+  }
     useEffect(()=>{
         const observables=document.querySelectorAll(".formCon > div")
         const observer=new IntersectionObserver(handleIntersection)
@@ -96,26 +101,27 @@ const Contact=()=>{
         }
     })
     return (
-      <Container >
+      <Container id="contact" >
+        
         <SectionBtn Icon={CgHello} text="Contact" />
         <ContactHeader>
           Let's Keep In <Colored>touch </Colored>!
         </ContactHeader>
         <Email>chigbustephennamdi@gmail.com</Email>
-        <Form className="formCon">
+        <Form onSubmit={handleSubmit} className="formCon">
           <InputFlex>
             <HalfInput>
               <Label htmlFor="name">
                 Name <S>*</S>
               </Label>
-              <Input id="name" placeholder="Your Full Name"></Input>
+              <Input name="name" id="name" placeholder="Your Full Name"></Input>
             </HalfInput>
 
             <HalfInput>
               <Label htmlFor="email">
                 Email <S>*</S>
               </Label>
-              <Input id="email" placeholder="Your Email"></Input>
+              <Input name="email" id="email" placeholder="Your Email"></Input>
             </HalfInput>
           </InputFlex>
           <InputFlex>
@@ -123,31 +129,31 @@ const Contact=()=>{
               <Label htmlFor="phone">
                 Phone <S>*</S>
               </Label>
-              <Input id="phone" placeholder="Your Full Name"></Input>
+              <Input name="phone" id="phone" placeholder="Your Full Name"></Input>
             </HalfInput>
 
             <HalfInput>
               <Label htmlFor="subject">
                 Subject <S>*</S>
               </Label>
-              <Input id="subject" placeholder="Your Email"></Input>
+              <Input name="subject" id="subject" placeholder="Your Email"></Input>
             </HalfInput>
           </InputFlex>
           <HalfInput>
             <Label htmlFor="budget">Your Budget (Optional)</Label>
-            <Input placeholder="Let's work with your budget"></Input>
+            <Input name="budget" placeholder="Let's work with your budget"></Input>
           </HalfInput>
           <HalfInput>
             <Label>Your Message</Label>
-            <Input placeholder="Your Email"></Input>
+            <Input name="message"  placeholder="Your Message"></Input>
           </HalfInput>
           <Hr />
           <Label htmlFor="attachment">
             <MdOutlineCloudUpload style={{ marginRight: "10px" }} /> Add An
             Attachment
           </Label>
-          <Input id="attachment" type="file" style={{ display: "none" }} />
-          <SendBtn>Send Message</SendBtn>
+          <Input name="attachement" id="attachment" type="file" style={{ display: "none" }} />
+          <SendBtn >Send Message</SendBtn>
         </Form>
       </Container>
     );
