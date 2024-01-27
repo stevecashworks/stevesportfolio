@@ -3,6 +3,7 @@ import  {useEffect} from "react";
 import { Content,SectionBtn,} from "../hero/hero";
 import { RxAvatar } from "react-icons/rx";
 import handleIntersection from "../../functions/handleIntersection";
+import { mobile } from "../../responsive";
 import "./about.css"
 const AboutHead=styled.div`
 margin-top:30px;
@@ -13,8 +14,12 @@ const Container = styled.div`
   width: 100%;
   position: relative;
   height: 600px;
-  /* overflow-x: hidden; */
+  
   z-index: 5;
+  ${mobile(`
+    height:700px;
+    z-index:9;
+  `)}
 `;
 const AboutIntro=styled.p`
 width:500px;
@@ -22,11 +27,21 @@ position:relative;
 top:40px;
 line-height: 30px;
 font-size:18px;
+${mobile(`
+  width:90vw;
+  bottom:30px;
+  margin:30px 10px;
+`)}
 `
 const AboutText=styled.p`
   width:600px;
   position: relative;
   top:60px;
+  ${mobile(`
+    width:90vw;
+    margin:30px 10px;
+    top:70px;
+  `)}
 
 `
 const Colored=styled.span`
@@ -47,7 +62,7 @@ const About = () =>{
     
   })
     return (
-      <Container style={{  height:"600px" }} id="about">
+      <Container  id="about">
         {/* <Background src={backvid} autoPlay loop muted></Background> */}
         <Content className="aboutContent" style={{ paddingTop: "30px", boxSizing: "border-box",marginTop:"60px" }}>
           <SectionBtn className="aboutBtn"

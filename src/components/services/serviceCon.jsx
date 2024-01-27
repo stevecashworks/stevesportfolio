@@ -1,4 +1,5 @@
 import styled  from "styled-components";
+import { mobile } from "../../responsive";
 const Container = styled.div`
   width: 500px;
   height: 150px;
@@ -9,6 +10,9 @@ const Container = styled.div`
   &:hover {
     border: 1px solid var(--primary);
   }
+  ${mobile(`
+    width:90vw;
+  `)}
 `;
 const ServiceConTop=styled.div`
     display:flex;
@@ -28,6 +32,9 @@ position: relative;
 left:20px;
 bottom:20px;
 color:rgb(255,255,255,0.8);
+${mobile(`
+    left:10px;
+`)}
 
 `
 

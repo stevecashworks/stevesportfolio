@@ -10,3 +10,4 @@ const Projects=()=>{
         </Container>
     )
 }
+export default Projects

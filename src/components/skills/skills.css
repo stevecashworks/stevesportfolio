@@ -20,3 +20,8 @@
     transform: translateX(0);
     transform: translateY(0);
 }
+@media(max-width:1200px){
+ .moveDown,.moveLeft,.moveRight,.moveUp{
+    transform: translateX(0) translateY(0) scale(0.7);
+}   
+}

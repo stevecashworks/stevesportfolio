@@ -6,10 +6,17 @@ import { useEffect } from "react"
 import "./contact.css"
 import getContactDetails from "./getContactDetails"
 import handleIntersection from "../../functions/handleIntersection"
+import { mobile } from "../../responsive"
 const Container=styled.div`
     height:700px;
     width:100%;
     padding-left:50px;
+    ${mobile(`
+    height:auto;
+    position:relative;
+    top:70px;
+    padding-left:10px;
+    `)}
 
 `
 const ContactHeader=styled.div`
@@ -41,6 +48,9 @@ const InputFlex = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  ${mobile(`
+    flex-direction:column;
+  `)}
 `;
 const HalfInput=styled.div`
 width:300px;

@@ -5,18 +5,28 @@ import ServiceCon from "./serviceCon.jsx"
 import {MdDeviceHub} from "react-icons/md"
 import {CiMobile1} from "react-icons/ci"
 import {IoBugOutline} from "react-icons/io5"
+import { mobile } from "../../responsive.js"
 
 const Container=styled.div`
     height:auto;
-    width:100%;
+    width:98%;
     position:relative;
     top:40px;
     box-sizing:border-box;
     padding: 60px;
+    ${mobile(`
+      padding:0;
+      padding-top:60px;
+      padding-left:10px;
+      
+    `)}
 `
 
 const ServiceHeader=styled.p`
 font-size:55px;
+${mobile(`
+  font-size:40px;
+`)}
 `
 const Colored=styled.span`
     color:var(--primary);

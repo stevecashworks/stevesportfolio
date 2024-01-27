@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import steve from "../../assets/steve.png"
+import { mobile } from "../../responsive";
 import {
   FaGithub,
   FaTwitter,
@@ -12,6 +13,13 @@ const LeftCon = styled.div`
   box-sizing: border-box;
   height: 100%;
   position:fixed;
+  ${mobile(`
+     left:0;
+     height:auto;
+     top:20px;
+     width:100vw;
+     position:relative;
+  `)}
   
 `;
 const NavCon=styled.div`
@@ -23,6 +31,11 @@ left:50px;
 position:relative;
 padding-top:40px;
 box-sizing:border-box;
+${mobile(`
+    left:10px;
+    width:90vw;
+    height: 700px;
+`)}
 
     
 `
@@ -40,7 +53,7 @@ display:flex;
 &:after{
     display:flex;
     align-items:center;
-    content:"ST";
+    content:"S";
     font-size:8px;
     height: 15px;
     width:15px;
@@ -58,6 +71,9 @@ display:flex;
 const TagLine=styled.div`
     width:120px;
     font-size:12px;
+    ${mobile(`
+        display:none;
+    `)}
 `
 const ImageCon=styled.div`
 height:200px;

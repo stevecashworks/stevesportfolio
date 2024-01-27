@@ -13,10 +13,11 @@ const Iconslist = [
   { Icon: BsBriefcase, path: "#resume" },
   { Icon: GrServices, path: "#services" },
   { Icon: BiShapeSquare, path: "#skills" },
-  { Icon: PiVinylRecordBold, path: "#portfolio" },
+  { Icon: PiVinylRecordBold, path: "#projects" },
   { Icon: SlSpeech, path: "#testimonial" },
   { Icon: CgHello, path: "#contact" },
 ];
+import { mobile } from "../../responsive";
 
 export const Nav = styled.div`
   height: 350px;
@@ -32,6 +33,9 @@ export const Nav = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 9;
+  ${mobile(`
+    display:none;
+  `)}
 `;
 export const Anc = styled.a`
   color: rgb(255, 255, 255, 0.7);
